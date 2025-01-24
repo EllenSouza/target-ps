@@ -32,8 +32,23 @@ while (a < numero):
         print("Número está na sequência")
         break
 
+#questao 4
+print("Questão 4")
 
+faturamento = [
+    ("SP", 67836.43),
+    ("RJ", 36678.66),
+    ("MG", 29229.88),
+    ("ES", 27165.48),
+    ("Outros", 19849.53)
+]
+total = 0
+for _,valor in faturamento:
+    total += valor
 
+for estado, valor in faturamento:
+    representacao = (valor / total) * 100
+    print( f"{estado}: {representacao:.2f}%")
 
 #questao 5
 print("Questão 5")
