@@ -11,3 +11,24 @@ while (k < indice):
 print("Questão 1")
 print(soma)
 
+
+#questão 2
+
+a = -1
+b =  1
+
+numero = 13
+
+print("Questão 2")
+
+while (a < numero):
+    #fibonacci
+    c = a + b
+    print(c)
+    a = b
+    b = c
+    #verifica se o número está na sequência
+    if (c == numero):
+        print("Número está na sequência")
+        break
+
