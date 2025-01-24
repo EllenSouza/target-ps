@@ -1,6 +1,8 @@
 
 import random
 
+print("\n\n")
+
 #questão 1 
 
 indice = 13
@@ -96,4 +98,5 @@ inverso = []
 for i in range (len(palavra)-1 , -1, -1):
     inverso.append(palavra[i])
 
+print("palavra invertida:")
 print(''.join(inverso))
