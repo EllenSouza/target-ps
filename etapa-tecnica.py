@@ -32,3 +32,16 @@ while (a < numero):
         print("Número está na sequência")
         break
 
+
+
+
+#questao 5
+print("Questão 5")
+
+palavra = input("Digite a palavra: ")
+inverso = []
+#percorre a palavra começando no final
+for i in range (len(palavra)-1 , -1, -1):
+    inverso.append(palavra[i])
+
+print(''.join(inverso))
