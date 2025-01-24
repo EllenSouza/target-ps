@@ -1,5 +1,5 @@
 
-import random
+import json
 
 #questão 1 
 def questao1():
@@ -42,17 +42,20 @@ def questao2():
 def questao3():
     print("Questão 3")
 
-    #gera valores aleatórios de faturamento entre 100 e 500
-    faturamento_diario = [random.uniform(100, 500) for _ in range(30)]
+    #ler o arquivo json com os dados de faturamento
+    with open('dados.json', 'r') as f:
+        dadosJson = json.load(f)
 
-    menor = min(faturamento_diario)
-    maior = max(faturamento_diario)
+    faturamentos_diarios = [item['valor'] for item in dadosJson]
 
-    media = sum(faturamento_diario) / len(faturamento_diario)
+    menor = min(faturamentos_diarios)
+    maior = max(faturamentos_diarios)
+
+    media = sum(faturamentos_diarios) / len(faturamentos_diarios)
 
     dias_superior_media = 0
 
-    for valor in faturamento_diario:
+    for valor in faturamentos_diarios:
         if valor > media:
             dias_superior_media += 1
 
